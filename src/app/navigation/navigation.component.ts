@@ -6,17 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-
 export class NavigationComponent implements OnInit {
   @Input()
   title: string;
-  constructor(private router: Router
-) {}
+
+  constructor(private router: Router) {}
 
   ngOnInit() {}
 
   goTo(location: string) {
-    console.log(location);
     this.router.navigateByUrl(location);
   }
 }
